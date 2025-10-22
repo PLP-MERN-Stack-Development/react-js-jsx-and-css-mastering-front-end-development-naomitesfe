@@ -1,18 +1,116 @@
-# React + Vite
+# Task Manager - Week 3 MERN Frontend Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **responsive Task Manager** built with **React.js, JSX, and Tailwind CSS** for the Week 3 Front-End Development assignment.  
+This project demonstrates **component architecture**, **state management with hooks**, **local storage persistence**, **API integration**, and **responsive design**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📝 Table of Contents
 
-## React Compiler
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [Deployment](#deployment)
+- [Author](#author)
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## 🌟 Project Overview
 
-## Expanding the ESLint configuration
+This Task Manager allows users to:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Add new tasks
+- Mark tasks as completed
+- Edit tasks
+- Delete tasks
+- Filter tasks (All, Active, Completed)
+- Persist tasks using **Local Storage**
+- Toggle between **Light and Dark mode**
+- Fetch data from a public API (optional integration)
+- Responsive layout for mobile, tablet, and desktop
+
+---
+
+## ✅ Features
+
+- **Reusable Components:** Button, TaskCard, TaskForm, TaskList, TaskManager, Header, Footer  
+- **State Management:** `useState`, `useEffect`, `useContext`  
+- **Custom Hooks:** `useLocalStorage` for tasks persistence  
+- **Theme Switcher:** Light/Dark mode using Tailwind CSS  
+- **Responsive Design:** Mobile-first layout with Tailwind utilities  
+- **Task Filtering:** Filter tasks by All / Active / Completed  
+- **Task Editing:** Inline editing for tasks  
+- **Task Persistence:** Local Storage saves tasks across sessions  
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React.js, JSX  
+- **Styling:** Tailwind CSS (v4)  
+- **State Management:** React Hooks (`useState`, `useEffect`, `useContext`)  
+- **Package Manager:** npm  
+- **Bundler:** Vite  
+
+---
+
+## 📂 Project Structure
+
+src/
+├── components/
+│ ├── Header.jsx
+│ ├── Footer.jsx
+│ ├── Button.jsx
+│ ├── TaskManager.jsx
+│ ├── TaskForm.jsx
+│ ├── TaskList.jsx
+│ └── TaskCard.jsx
+├── context/
+│ └── ThemeContext.jsx
+├── hooks/
+│ └── useLocalStorage.jsx
+├── api/
+│ └── fetchTasks.js
+├── App.jsx
+├── main.jsx
+└── index.css
+
+yaml
+Copy code
+
+---
+
+## 💻 Installation
+
+1. Clone your GitHub repository:
+
+```bash
+git clone https://github.com/PLP-MERN-Stack-Development/react-js-jsx-and-css-mastering-front-end-development-naomitesfe
+cd task-manager
+```
+Install dependencies:
+
+``` bash
+npm install
+```
+Start the development server:
+
+```bash
+npm run dev
+```
+Open in browser:
+
+```
+http://localhost:5173/
+```
+## 🚀 Usage
+- Add Task: Type in the input box and click Add Task
+- Complete Task: Click the checkbox to mark as completed
+- Edit Task: Click Edit, update text, and click Save
+- Delete Task: Click Delete
+- Filter Tasks: Use All / Active / Completed buttons
+- Theme Switch: Toggle light/dark mode
