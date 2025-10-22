@@ -1,25 +1,18 @@
-export default function TaskItem({ task, onToggle, onDelete }) {
+export default function TaskItem({ task, toggleComplete, deleteTask }) {
   return (
-    <div
-      className={`flex justify-between items-center bg-gray-50 p-3 rounded-lg shadow-sm ${
-        task.completed ? "opacity-70 line-through" : ""
-      }`}
-    >
-      <div className="flex items-center space-x-2">
-        <input
-          type="checkbox"
-          checked={task.completed}
-          onChange={() => onToggle(task.id)}
-          className="w-4 h-4"
-        />
-        <span>{task.text}</span>
-      </div>
-      <button
-        onClick={() => onDelete(task.id)}
-        className="text-red-500 hover:text-red-700 font-semibold"
+    <li className="flex justify-between items-center p-2 border-b border-gray-200 dark:border-gray-700">
+      <span
+        onClick={() => toggleComplete(task.id)}
+        className={`flex-1 cursor-pointer ${task.completed ? "line-through text-gray-400" : ""}`}
       >
-        ✕
+        {task.text}
+      </span>
+      <button
+        className="ml-2 px-2 py-1 bg-red-500 text-white rounded hover:bg-red-600"
+        onClick={() => deleteTask(task.id)}
+      >
+        Delete
       </button>
-    </div>
+    </li>
   );
 }
